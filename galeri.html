@@ -14,48 +14,77 @@
     </div>
     <div class="row">
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/prenses.jpeg" alt="prenses" data-bs-toggle="modal" data-bs-target="#resimler">
-        </div>
-
-        <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/dedektif.jpeg" alt="dedektif" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/superman.jpeg" alt="Superman" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/flash.jpeg" alt="flash" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/prenses.jpeg" alt="Pamuk Prenses" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/horoz-tavuk.jpeg" alt="horoz-tavuk" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/robot.jpeg" alt="robot" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/kurbaga.jpeg" alt="kurbaga" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/horoz.jpeg" alt="Horoz" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/mantar.jpeg" alt="mantar" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/kedi.jpeg" alt="Çizmeli Kedi" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
+        </div>
+        <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
+            <img src="../resim/kurbaga.jpeg" alt="Elf Kurbağa" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         
 
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/manzara1.jpeg" alt="manzara1" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/manzara1.jpeg" alt="Deniz Feneri" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/manzara2.jpeg" alt="manzara2" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/manzara2.jpeg" alt="Heidi'nin Evi" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/manzara3.jpeg" alt="manzara3" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/manzara3.jpeg" alt="Bozkir" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/manzara4.jpeg" alt="manzara4" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/manzara4.jpeg" alt="Norveç" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/manzara5.jpeg" alt="manzara5" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/manzara7.jpeg" alt="Hilda'nin Evi" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
         <div class="card col-lg-2 col-md-6 col-sm-12 mb-4">
-            <img src="../resim/manzara6.jpeg" alt="manzara6" data-bs-toggle="modal" data-bs-target="#resimler">
+            <img src="../resim/manzara5.jpeg" alt="Gece Deniz Feneri" class="card-img-top" data-bs-toggle="modal" data-bs-target="#resimler">
         </div>
     </div>
 
+    <div class="modal fade" id="resimler" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="modal_title" class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            <div class="modal-body">
+                <img id="modal_img" src="" class="card-img-top" alt="Manzara">
+            </div>
+          </div>
+        </div>
+      </div>
 
 
+<script>
+    document.querySelectorAll(".card img").forEach(tiklama=>{
+tiklama.addEventListener("click",()=>{
+    let src=tiklama.getAttribute("src");
+    let modalImage=document.getElementById("modal_img");
+    modalImage.setAttribute("src",src);
+
+    let modal_title=document.getElementById("modal_title");
+    let alt=tiklama.getAttribute("alt");
+    modal_title.setAttribute("alt",alt);
+    modal_title.innerText=alt;
+});
+
+    });
+
+
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
